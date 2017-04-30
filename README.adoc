@@ -1,0 +1,30 @@
+== SpringBoot Jersey MultiModule ==
+
+The project provides a sample Spring Boot application example with Jersey and MongoDB using maven multi-modules.
+
+=== Quickstart: ===
+
+==== Installation: ====
+
+Clone the repository using command
+[source]
+----
+git clone git://github.com/aparnachaudhary/springboot-jersey-multimodule.git
+----
+
+==== Building: ====
+image::https://travis-ci.org/aparnachaudhary/springboot-jersey-multimodule.png?branch=master["Build Status", link="https://travis-ci.org/aparnachaudhary/springboot-jersey-multimodule"]
+
+To build, issue this from the command line:
+[source,bash]
+----
+mvn clean install
+----
+
+=== Feedback: ===
+
+Please feel free to raise bug reports or feature requests here https://github.com/aparnachaudhary/springboot-jersey-multimodule/issues?state=open[Issues].
+
+=== Licensing and Copyright: ===
+
+The project is licensed under the http://www.apache.org/licenses/LICENSE-2.0[Apache License, Version 2.0]
