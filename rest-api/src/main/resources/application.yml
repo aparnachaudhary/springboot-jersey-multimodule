@@ -1,0 +1,15 @@
+server:
+  port: 8081
+management:
+  port: 10081
+  contextPath: /admin
+  security:
+    enabled: false
+spring:
+  jersey:
+    applicationPath: /rest
+  data:
+    mongodb:
+      database: error-rest-demo
+      host: localhost
+      port: 27017

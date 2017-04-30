@@ -1,0 +1,9 @@
+management:
+  port: -1
+spring:
+  jersey:
+    applicationPath: /rest-test
+  data:
+    mongodb:
+      database: test-db
+      port: 0
