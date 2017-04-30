@@ -1,6 +1,0 @@
-spring:
-  data:
-    mongodb:
-      database: error-rest-demo
-      host: localhost
-      port: 27017

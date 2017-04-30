@@ -1,5 +1,0 @@
-spring:
-  data:
-    mongodb:
-      database: test-db
-      port: 0

@@ -21,13 +21,16 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
+    public Customer create(Customer customer){
+      Customer savedCustomer =  customerRepository.save(customer);
+        return savedCustomer;
+    }
 
     public List<Customer> list() {
         return customerRepository.findAll();
     }
 
     public Customer findById(String id) throws CustomerNotFoundException {
-//        this.customerRepository.save(new Customer("Alice", "Smith"));
         Customer customer = customerRepository.findOne(id);
         if (customer == null) {
             throw new CustomerNotFoundException("Not Found for id "+ id);

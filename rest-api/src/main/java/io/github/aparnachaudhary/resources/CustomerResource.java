@@ -5,11 +5,14 @@ import io.github.aparnachaudhary.exceptions.CustomerNotFoundException;
 import io.github.aparnachaudhary.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -25,6 +28,17 @@ public class CustomerResource {
         this.customerService = customerService;
     }
 
+    @POST
+//    @Consumes(MediaType.APPLICATION_JSON)
+    public Response create(Customer customer, @Context UriInfo uriInfo){
+        Customer saved = customerService.create(customer);
+        URI location = uriInfo.getAbsolutePathBuilder()
+                .path("{id}")
+                .resolveTemplate("id", saved.getId())
+                .build();
+
+        return Response.created(location).build();
+    }
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Customer> find(){

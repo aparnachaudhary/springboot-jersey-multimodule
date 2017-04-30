@@ -15,7 +15,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-	</properties>
+        <version.spring-boot-dependencies>1.5.3.RELEASE</version.spring-boot-dependencies>
+    </properties>
 
     <modules>
         <module>core</module>
@@ -28,7 +29,7 @@
                 <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>1.5.3.RELEASE</version>
+                <version>${version.spring-boot-dependencies}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

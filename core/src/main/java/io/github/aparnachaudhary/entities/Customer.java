@@ -15,6 +15,9 @@ public class Customer {
     private Address homeAddress;
     private Address officeAddress;
 
+    public Customer() {
+    }
+
     public Customer(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
